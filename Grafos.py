@@ -39,13 +39,13 @@ def criar_grafo_aleatorio(x):
 
 def criar_grafo_heterogeneo(x):
     arestas = []
-    L = [1, 2]
+    l = [1, 2]
     arestas.append((1, 2))
 
     for i in range(3, x + 1):
-        u = random.choice(L)
+        u = random.choice(l)
         arestas.append((i, u))
-        L.extend([u, i])
+        l.extend([u, i])
 
     # Funções para criar um grafo não-direcionado e adicionar as arestas que estão na lista:
     grafo = nx.Graph()
